@@ -1,0 +1,58 @@
+[project]
+name = "my_future_data"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = "~=3.12"
+
+
+dependencies = [
+    "mypy",
+    "ruff",
+    "black",
+    "isort",
+    "python-dotenv",
+    "pydub",
+    "numpy",
+    "torch",
+    "torchaudio",
+    "soundfile",
+    "openai",
+    "elevenlabs",
+    "typer",
+]
+
+
+[tool.pytest.ini_options]
+asyncio_mode = 'auto'
+log_level = 'DEBUG'
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+line-length = 120
+
+[tool.mypy]
+# Unncoment this if you want to use pydantic
+#plugins = [
+#    "pydantic.mypy",
+#]
+
+strict = "true"
+
+warn_return_any = "true"
+warn_unreachable = "true"
+implicit_optional = "true"
+disallow_incomplete_defs = "true"
+disallow_untyped_defs = "true"
+disallow_untyped_decorators = "true"
+disallow_any_unimported = "true"
+disallow_any_expr = "false"
+disallow_any_decorated = "false"
+disallow_any_explicit = "false"
+disallow_any_generics = "false"
+disallow_subclassing_any = "true"
+
